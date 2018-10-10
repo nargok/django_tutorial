@@ -2,6 +2,7 @@ from django.urls import path
 
 from . import views
 
+app_name = 'polls'
 urlpatterns = [
   path('', views.index, name='index'),
   # 山括弧を使用すると、URLの一部が「キャプチャ」され、キーワード引数としてビュー関数に送信します。
