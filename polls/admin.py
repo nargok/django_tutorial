@@ -16,7 +16,9 @@ class QuestionAdmin(admin.ModelAdmin):
       # classes : ['collapse']はHideリンクで要素を隠せるようにする
       ('Date information', {'fields': ['pub_date'], 'classes': ['collapse']})
   )
-  inlines = [ChoiceInline]
+  inlines = [ChoiceInline] # Choiceを同じ画面上で編集できるようにする
   list_display = ('question_text', 'pub_date', 'was_published_recently')
+  list_filter = ['pub_date'] # サイドバーのフィルター機能
+  search_fields = ['question_text']
 
 admin.site.register(Question, QuestionAdmin)
