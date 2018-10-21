@@ -2,3 +2,5 @@ db.sqlite3
 polls/__pycache__/admin.cpython-36.pyc
 mysite/__pycache__/*
 polls/__pycache__/*
+accounts/__pycache__/*
+accounts/migrations/__pycache__/*
