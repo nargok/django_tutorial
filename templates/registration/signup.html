@@ -4,10 +4,25 @@
 {% block titte %}ユーザー登録{% endblock %}
 
 {% block content %}
-  <h2>ユーザー登録</h2>
-  <form method="post">
-    {% csrf_token %}
-    {% bootstrap_form form %}
-    <button type="submit" class="btn btn-primary">ユーザー登録</button>
-  </form>
+<div class="justify-content-center">
+  <div class="col-lg-8 col-md-10 col-sm-12">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">ユーザー登録</h4>
+      </div>
+      <div class="card-body">
+        <form method="post" novalidate>
+          {% csrf_token %}
+          {% bootstrap_form form %}
+          {% buttons %}
+            <button type="submit" class="btn btn-primary btn-block">ユーザー登録</button>
+          {% endbuttons %}
+        </form>
+      </div>
+      <div class="card-footer text-muted text-center">
+        ログインは<a href="{% url 'login' %}">こちら</a>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
