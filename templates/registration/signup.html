@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load bootstrap4 %}
 
 {% block titte %}ユーザー登録{% endblock %}
 
@@ -6,7 +7,7 @@
   <h2>ユーザー登録</h2>
   <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">ユーザー登録</button>
+    {% bootstrap_form form %}
+    <button type="submit" class="btn btn-primary">ユーザー登録</button>
   </form>
 {% endblock %}
